@@ -1,6 +1,8 @@
+import { defineConfig } from 'vite'
 const path = require('path')
 
-export default {
+export default defineConfig({
+    assetsInclude: ['**/*.mp4'],
   root: path.resolve(__dirname, 'src'),
   resolve: {
     alias: {
@@ -11,4 +13,5 @@ export default {
     port: 8080,
     hot: true
   }
-}
+})
+

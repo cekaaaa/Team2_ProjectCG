@@ -6,10 +6,17 @@
     <title>Bootstrap w/ Vite</title>
   </head>
   <body>
-    <div class="container py-4 px-3 mx-auto">
-      <h1>Hello, Bootstrap and Vite!</h1>
-      <button class="btn btn-primary">Primary button</button>
-    </div>
+    <video id="bg" autoplay muted loop>
+      <source src="assets/bg.mp4">
+    </video>
     <script type="module" src="./js/main.js"></script>
+    <style>
+      #bg{
+        position: fixed;
+        z-index: -1;
+        width: 100%;
+        height: auto;
+      }
+    </style>
   </body>
 </html>
