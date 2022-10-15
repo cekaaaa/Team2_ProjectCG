@@ -7,10 +7,14 @@
     <title>3D Roll Dice</title>
 </head>
 <body>
-    <video id="bg" autoplay muted loop style="opacity: 50%">
-        <source src="assets/bg.mp4" style="opacity: 50%">
+    <video id="bg" autoplay muted loop >
+        <source src="assets/bg.mp4">
     </video>
-    <h1>3D ROLL DICE</h1>
+    <div class="row judul">
+        <div class="col-md-12">
+            <h1>3D ROLL DICE</h1>
+        </div>
+    </div>
       
 </body>
 </html>
@@ -19,14 +23,19 @@
 
 <style>
     #bg{
-      position: fixed;
-      z-index: -1;
-      width: 100%;
-      height: auto;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity:50%;
     }
 
     h1{
         text-align: center;
-        
+    }
+
+    .judul{
+
     }
   </style>
