@@ -21,11 +21,11 @@
         </div>
 
         <div class="row second">
-            <div class="column kiri">
+            <div class="column">
                 <h5>Choose The Number of Dice</h5>
             </div>
-            <div class="column kanan">
-
+            <div class="column">
+                <h5>Choose The Number of Dice 2</h5>  
             </div>
         </div>
 
@@ -59,20 +59,24 @@
         text-align: center;
         position: relative;
         background-color: antiquewhite;
+        width: 90%;
+        height: 100%;
+        margin: 10px auto;
     }
 
     .second {
         margin-top: 50px;
     }
 
-    .kiri {
-        float: right;
-        width: 50%;
-        background-color: aqua;
-    }
-
-    .kiri {
+    .column {
         float: left;
         width: 50%;
+        background-color:aqua;
     }
-  </style>
+
+    @media screen and (max-width: 1200px) {
+        .column {
+            width: 100%;
+        }
+    }
+</style>
