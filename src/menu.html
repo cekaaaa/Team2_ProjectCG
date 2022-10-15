@@ -7,9 +7,26 @@
     <title>3D Roll Dice</title>
 </head>
 <body>
-    <video id="bg" autoplay muted loop>
-        <source src="assets/bg.mp4">
-      </video>
-      <script type="module" src="./js/main.js"></script>
+    <video id="bg" autoplay muted loop style="opacity: 50%">
+        <source src="assets/bg.mp4" style="opacity: 50%">
+    </video>
+    <h1>3D ROLL DICE</h1>
+      
 </body>
 </html>
+
+<script type="module" src="./js/main.js"></script>
+
+<style>
+    #bg{
+      position: fixed;
+      z-index: -1;
+      width: 100%;
+      height: auto;
+    }
+
+    h1{
+        text-align: center;
+        
+    }
+  </style>
