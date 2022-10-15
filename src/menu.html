@@ -23,6 +23,11 @@
         <div class="row second">
             <div class="column">
                 <h5>Choose The Number of Dice</h5>
+                <label for="dice">Dice</label>
+                <select name="dice" id="dice">
+                    <option value="oneDice">1 Dice</option>
+                    <option value="oneDice">2 Dice</option>
+                </select>
             </div>
             <div class="column">
                 <h5>Choose The Number of Dice 2</h5>  
@@ -50,9 +55,14 @@
         text-align: center;
         margin-top: 5%;
         color: rgb(9, 9, 108);
+        font-size: 50px;
     }
     h4{
         margin: -30px;
+    }
+
+    h5{
+        text-align: left;
     }
 
     .container-content {
@@ -70,11 +80,12 @@
 
     .column {
         float: left;
+        text-align: left;
         width: 50%;
         background-color:aqua;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 800px) {
         .column {
             width: 100%;
         }
