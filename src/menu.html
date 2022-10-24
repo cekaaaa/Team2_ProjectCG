@@ -23,7 +23,7 @@
       <div class="col-12 col-md-6">
         <h5 class="sub-text">Choose The Number of Dice</h5>
         <div class="row">
-          <label for="chooseDice" class="col-sm-2 col-form-label dice">Dice</label>
+          <label for="chooseDice" class="col-sm-2 col-form-label txtdice">Dice</label>
           <div class="col-sm-10">
             <select name="dice" class="form-select" id="dice">
               <option value="oneDice">1 Dice</option>
@@ -44,10 +44,10 @@
 
       <div class="col-12 col-md-6">
         <h5 class="sub-text">Kolom kanan buat dadu</h5>
-        <div class="row">
-        <!-- Dadu 1 -->
+        <div class="row text-center">
+          <!-- Dadu 1 -->
           <div class="container">
-            <div id='dice1' class="dice dice-one">
+            <div id='dice1' class="dice mx-auto">
               <div id="dice-one-side-one" class='side one'>
                 <div class="dot one-1"></div>
               </div>
@@ -83,8 +83,8 @@
               </div>
             </div>
           </div>
-      </div>
-       <!-- Dadu 2 -->
+        </div>
+        <!-- Dadu 2 -->
 
 
         <!-- <div class="container">
@@ -124,13 +124,11 @@
             </div>
           </div> 
        </div> -->
-       <div id='roll' class='roll-button'>
-        <button id="start">
-          <span class="span-button"
-            >Roll<i class="bi bi-arrow-right"></i
-          ></span>
-        </button>
-      </div>
+        <div id='roll' class='roll-button'>
+          <button id="start">
+            <span class="span-button">Roll<i class="bi bi-arrow-right"></i></span>
+          </button>
+        </div>
 
       </div>
     </div>
@@ -151,7 +149,7 @@
     font-family: "Nova Square", cursive;
   }
 
-  .dice {
+  .txtdice {
     font-size: 20px;
   }
 
@@ -221,21 +219,23 @@
       font-size: 20px;
     }
 
-    .dice {
+    .txtdice {
       font-size: 10px;
     }
 
 
 
   }
+
   /* Dice */
   .dice {
     position: relative;
     width: 100px;
     height: 100px;
     transform-style: preserve-3d;
-    transition: transform 1s; }
-  
+    transition: transform 1s;
+  }
+
   .dot {
     position: absolute;
     width: 20px;
@@ -243,89 +243,122 @@
     margin: -10px 5px 5px -10px;
     border-radius: 20px;
     background-color: #ef233c;
-    box-shadow: inset 2px 2px #d90429;}
-  
-  .dice-one {
-    left: 450px; }
-  
+    box-shadow: inset 2px 2px #d90429;
+  }
+
+  /* .dice-one {
+    left: 450px; } */
+
   .dice-two {
     left: 300px;
-    top:-200px;
+    top: -200px;
   }
-  
+
   .side {
     position: absolute;
     background-color: #ffF;
-    border-radius:5px;
+    border-radius: 5px;
     width: 100px;
     height: 100px;
     border: 1px solid #e5e5e5;
     text-align: center;
     line-height: 2em;
   }
-  
+
   .side:nth-child(1) {
-    transform: translateZ(3.1em); }
-  
+    transform: translateZ(3.1em);
+  }
+
   .side:nth-child(6) {
-    transform: rotateY(90deg) translateZ(3.1em); }
-  
+    transform: rotateY(90deg) translateZ(3.1em);
+  }
+
   .side:nth-child(3) {
-    transform: rotateY(-90deg) translateZ(3.1em); }
-  
+    transform: rotateY(-90deg) translateZ(3.1em);
+  }
+
   .side:nth-child(4) {
-    transform: rotateX(90deg) translateZ(3.1em); }
-  
+    transform: rotateX(90deg) translateZ(3.1em);
+  }
+
   .side:nth-child(5) {
-    transform: rotateX(-90deg) translateZ(3.1em); }
-  
+    transform: rotateX(-90deg) translateZ(3.1em);
+  }
+
   .side:nth-child(2) {
-    transform: rotateY(-180deg) translateZ(3.1em); }
-  
-  .two-1, .three-1, .four-1, .five-1, .six-1 {
+    transform: rotateY(-180deg) translateZ(3.1em);
+  }
+
+  .two-1,
+  .three-1,
+  .four-1,
+  .five-1,
+  .six-1 {
     top: 20%;
-    left: 20%; }
-  
-  .four-3, .five-3, .six-4 {
+    left: 20%;
+  }
+
+  .four-3,
+  .five-3,
+  .six-4 {
     top: 20%;
-    left: 80%; }
-  
-  .one-1, .three-2, .five-5 {
+    left: 80%;
+  }
+
+  .one-1,
+  .three-2,
+  .five-5 {
     top: 50%;
-    left: 50%; }
-  
-  .four-2, .five-2, .six-3 {
+    left: 50%;
+  }
+
+  .four-2,
+  .five-2,
+  .six-3 {
     top: 80%;
-    left: 20%; }
-  
-  .two-2, .three-3, .four-4, .five-4, .six-6 {
+    left: 20%;
+  }
+
+  .two-2,
+  .three-3,
+  .four-4,
+  .five-4,
+  .six-6 {
     top: 80%;
-    left: 80%; }
-  
+    left: 80%;
+  }
+
   .six-2 {
     top: 50%;
-    left: 20%; }
-  
+    left: 20%;
+  }
+
   .six-5 {
     top: 50%;
-    left: 80%; 
+    left: 80%;
   }
 
   .show-1 {
-    transform: rotateX(720deg) rotateZ(-720deg); }
-  
+    transform: rotateX(720deg) rotateZ(-720deg);
+  }
+
   .show-6 {
-    transform: rotateX(-900deg) rotateZ(1080deg); }
-  
+    transform: rotateX(-900deg) rotateZ(1080deg);
+  }
+
   .show-3 {
-    transform: rotateY(-450deg) rotateZ(-1440deg); }
-  
+    transform: rotateY(-450deg) rotateZ(-1440deg);
+  }
+
   .show-4 {
-    transform: rotateY(810deg) rotateZ(720deg); }
-  
+    transform: rotateY(810deg) rotateZ(720deg);
+  }
+
   .show-5 {
-    transform: rotateX(-810deg) rotateZ(-1080deg); }
-  
+    transform: rotateX(-810deg) rotateZ(-1080deg);
+  }
+
   .show-2 {
-    transform: rotateX(450deg) rotateZ(-720deg); }
+    transform: rotateX(450deg) rotateZ(-720deg);
+  }
 </style>
