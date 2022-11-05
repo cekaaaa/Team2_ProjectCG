@@ -9,19 +9,26 @@
   <link rel="icon" href="assets/icon.png" />
 </head>
 
+<!-- Background Video -->
 <video id="bg" autoplay muted loop>
   <source src="assets/bg.mp4" type="video/mp4" />
 </video>
 
 <body>
   <div class="container">
+
+    <!-- Title -->
     <div class=" col-12 col-md-12">
       <h1 class="title">3D Dice Roll</h1>
       <h4 class="chance">Roll Your Chance</h4>
     </div>
+
+    <!-- Layout Kiri -->
     <div class="row mt-4">
       <div class="col-12 col-md-6">
         <h5 class="sub-text">Choose The Number of Dice</h5>
+
+        <!-- Dropdown -->
         <div class="row">
           <label for="chooseDice" class="col-sm-2 col-form-label txtdice">Dice</label>
           <div class="col-sm-10">
@@ -31,6 +38,8 @@
             </select>
           </div>
         </div>
+
+        <!-- Textarea -->
         <div class="row">
           <h5 class="sub-text mt-4">Notes</h5>
           <div class="form-floating">
@@ -42,9 +51,11 @@
         </div>
       </div>
 
+      <!-- Layout Kanan -->
       <div class="col-12 col-md-6">
         <h5 class="sub-text">Kolom kanan buat dadu</h5>
         <div class="row text-center">
+
           <!-- Dadu 1 -->
           <div class="container">
             <div id='dice1' class="dice mx-auto">
@@ -84,46 +95,8 @@
             </div>
           </div>
         </div>
-        <!-- Dadu 2 -->
 
-
-        <!-- <div class="container">
-          <div id='dice2' class="dice dice-two">
-            <div id="dice-two-side-one" class='side one'>
-              <div class="dot one-1"></div>
-            </div>
-            <div id="dice-two-side-two" class='side two'>
-              <div class="dot two-1"></div>
-              <div class="dot two-2"></div>
-            </div>
-            <div id="dice-two-side-three" class='side three'>
-              <div class="dot three-1"></div>
-              <div class="dot three-2"></div>
-              <div class="dot three-3"></div>
-            </div>
-            <div id="dice-two-side-four" class='side four'>
-              <div class="dot four-1"></div>
-              <div class="dot four-2"></div>
-              <div class="dot four-3"></div>
-              <div class="dot four-4"></div>
-            </div>
-            <div id="dice-two-side-five" class='side five'>
-              <div class="dot five-1"></div>
-              <div class="dot five-2"></div>
-              <div class="dot five-3"></div>
-              <div class="dot five-4"></div>
-              <div class="dot five-5"></div>
-            </div>
-            <div id="dice-two-side-six" class='side six'>
-              <div class="dot six-1"></div>
-              <div class="dot six-2"></div>
-              <div class="dot six-3"></div>
-              <div class="dot six-4"></div>
-              <div class="dot six-5"></div>
-              <div class="dot six-6"></div>
-            </div>
-          </div> 
-       </div> -->
+        <!-- Button Roll -->
         <div id='roll' class='roll-button'>
           <button id="start">
             <span class="span-button">Roll<i class="bi bi-arrow-right"></i></span>
@@ -140,6 +113,7 @@
 
 </html>
 
+<!-- Import JS -->
 <script type="module" src="./js/main.js"></script>
 <script type="module" src="./js/menu.js"></script>
 

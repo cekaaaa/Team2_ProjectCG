@@ -11,24 +11,36 @@
 
 <body>
   <div class="mx-auto">
+
+    <!-- Background  -->
     <div class="back-canvas">
+
+      <!-- Video -->
       <video id="bg" autoplay muted loop src="assets/bg.mp4"></video>
+
+      <!-- dice.js -->
       <canvas id="dice"></canvas>
     </div>
+
+    <!-- Title -->
     <div class="front-canvas mx-auto" style="top: 10%; transform: translate(-50%, -50%); left: 50%">
       <div class="p-2">
         <h1 class="title mt-4 text-center">3D Dice Roll</h1>
       </div>
     </div>
+
+    <!-- Button Start -->
     <div class="p-2 front-canvas mx-auto" style="top: 90%">
       <a href="menu.html"><button id="start">
           <span class="span-button">Start <i class="bi bi-arrow-right"></i></span></button></a>
     </div>
   </div>
 
+  <!-- Import JS   -->
   <script type="module" src="./js/main.js"></script>
   <script type="module" src="./js/dice.js"></script>
 </body>
+
 <!-- internal css style -->
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Nova+Square&display=swap");
