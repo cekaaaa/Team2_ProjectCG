@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3D Roll Dice</title>
   <link rel="icon" href="assets/icon.png" />
-  <model-viewer src="../scene.gltf" alt="Dice" auto-rotate camera-controls ar ios-src="../scene.gltf"></model-viewer>
 </head>
 
 <!-- Background Video -->
@@ -16,10 +15,6 @@
 </video>
 
 <body>
-  <script src="three.min.js"></script>
-  <script src="GLTFLoader.js"></script>
-  <script src="OrbitControls.js"></script>
-
   <div class="container">
 
     <!-- Title -->
@@ -62,59 +57,43 @@
         <div class="row text-center">
 
           <!-- Dadu 1 -->
-          <script src="three.min.js"></script>
-          <script>
-
-            let scene, camera, renderer;
-
-            function init(){
-              scene = new THREE.Scene();
-              scene.background = new THREE.Color(0xdddddd)
-
-              camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
-              camera.rotationn.y = 45/180*Math.PI;
-              camera.position.x = 800;
-              camera.position.y = 100;
-              camera.position.x = 1000;
-
-              controls = new THREE.OrbitControls(camera);
-              controls.addEventListener('change', renderer);
-
-              hlight  = new THREE.AmbientLight (0x404040,100);
-              scene.add(hlight);
-
-              directionalLight = new THREE.Directionalight(0xffffff,100);
-              directionalLight.position.set(0,1,0);
-              directionalLight.castShadow = true;
-              scene.add(light);
-              light2 = new THREE.PointLight(0xc4c4c4,10);
-              light2.position.set(500,100,0);
-              scene.add(light2);
-              light3 = new THREE.PointLight(0xc4c4c4,10);
-              light3.position.set(0,100,-500);
-              scene.add(light3);
-              light2 = new THREE.PointLight(0xc4c4c4,10);
-              light2.position.set(-500,300,500);
-              scene.add(light4);
-
-              renderer = new THREE.WebGLRenderer({antialias:true});
-              renderer.setSize(window.innerWidth,window.innerHeight);
-              document.body.appendChild(renderer.domElement);
-
-              let loader =  new THREE.GLTFLoader();
-              loader.load('../scene.gltf', function(gltf){
-                dice = gltf.scene.children[0];
-                dice.scale.set(0.5,0.5,0.5);
-                scene.add(gltf.scene);
-                animate();
-              });
-            }
-            function animate(){
-              renderer.render(scene,camera);
-              requestAnimationFrame(animate)
-            }
-            init();
-          </script>
+          <div class="container">
+            <div id='dice1' class="dice mx-auto">
+              <div id="dice-one-side-one" class='side one'>
+                <div class="dot one-1"></div>
+              </div>
+              <div id="dice-one-side-two" class='side two'>
+                <div class="dot two-1"></div>
+                <div class="dot two-2"></div>
+              </div>
+              <div id="dice-one-side-three" class='side three'>
+                <div class="dot three-1"></div>
+                <div class="dot three-2"></div>
+                <div class="dot three-3"></div>
+              </div>
+              <div id="dice-one-side-four" class='side four'>
+                <div class="dot four-1"></div>
+                <div class="dot four-2"></div>
+                <div class="dot four-3"></div>
+                <div class="dot four-4"></div>
+              </div>
+              <div id="dice-one-side-five" class='side five'>
+                <div class="dot five-1"></div>
+                <div class="dot five-2"></div>
+                <div class="dot five-3"></div>
+                <div class="dot five-4"></div>
+                <div class="dot five-5"></div>
+              </div>
+              <div id="dice-one-side-six" class='side six'>
+                <div class="dot six-1"></div>
+                <div class="dot six-2"></div>
+                <div class="dot six-3"></div>
+                <div class="dot six-4"></div>
+                <div class="dot six-5"></div>
+                <div class="dot six-6"></div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Button Roll -->
@@ -218,6 +197,9 @@
     .txtdice {
       font-size: 10px;
     }
+
+
+
   }
 
   /* Dice */
