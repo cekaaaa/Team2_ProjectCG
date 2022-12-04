@@ -15,13 +15,21 @@
         <div class="back-canvas">
 
             <!-- Video -->
-            <video id="bg" autoplay muted loop src="assets/bg.mp4"></video>
+            <video id="bg"></video>
 
             <!-- dice.js -->
             <canvas id="dice"></canvas>
         </div>
+        <!-- Button Roll -->
+         <div>
+            <button type="button">Roll</button>
+         </div>
     </div>
+
 </body>
+
+
+<!-- CSS -->
 <style>
     .back-canvas {
         z-index: 1;
@@ -33,6 +41,7 @@
         z-index: -1;
         width: 100%;
         height: 100%;
+        background-color: #032251;
         object-fit: cover;
     }
 
@@ -42,6 +51,7 @@
         top: 0;
         position: absolute;
     }
+
 </style>
 
 </html>
