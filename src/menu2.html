@@ -21,9 +21,11 @@
             <canvas id="dice"></canvas>
         </div>
         <!-- Button Roll -->
-         <div>
-            <button type="button">Roll</button>
-         </div>
+        <div class="p-2 front-canvas mx-auto" style="top: 90%">
+        <a href="menu2.html"><button id="start">
+            <span class="span-button">Roll <i class="bi bi-arrow-right"></i></span></button></a>
+         </div>
+    </div>
     </div>
 
 </body>
@@ -31,6 +33,7 @@
 
 <!-- CSS -->
 <style>
+    
     .back-canvas {
         z-index: 1;
     }
@@ -41,7 +44,7 @@
         z-index: -1;
         width: 100%;
         height: 100%;
-        background-color: #032251;
+        background-color: #9593A4;
         object-fit: cover;
     }
 
@@ -51,6 +54,14 @@
         top: 0;
         position: absolute;
     }
+
+    .front-canvas {
+    z-index: 3;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+
 
 </style>
 
