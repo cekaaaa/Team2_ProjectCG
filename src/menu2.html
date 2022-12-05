@@ -21,9 +21,15 @@
             <canvas id="dice"></canvas>
         </div>
         <!-- Button Roll -->
-        <div class="p-2 front-canvas mx-auto" style="top: 90%">
-        <a href="menu2.html"><button id="start">
-            <span class="span-button">Roll <i class="bi bi-arrow-right"></i></span></button></a>
+        <div class="p-2 front-canvas mx-auto" style="top: 90%;  display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;" >
+        <a href="menu2.html"><button id="roll">
+            <span class="span-button">Roll Dice<i class="bi bi-arrow-right"></i></span></button></a>
          </div>
     </div>
     </div>
@@ -47,6 +53,23 @@
         background-color: #9593A4;
         object-fit: cover;
     }
+
+      /* button */
+        button {
+            display: inline-block;
+            cursor: pointer;
+            outline: none;
+            border: 0;
+            text-decoration: none;
+            font-size: inherit;
+            font-family: inherit;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            border-radius: 8px;
+            margin: 4px 2px;
+            font-size: 54px;
+            padding: 20px;
+        }
 
     canvas {
         margin: 0;
