@@ -2,57 +2,58 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Dice Roll</title>
-    <link rel="icon" href="assets/icon.png" />
-    <script type="module" src="js/menu2.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Dice Roll</title>
+  <link rel="icon" href="assets/icon.png" />
+  <script type="module" src="./js/menu.js"></script>
 </head>
 
 <body>
-    <div class="mx-auto">
-        <div class="back-canvas">
+  <div class="mx-auto">
+    <div class="back-canvas">
 
-           <!-- Video -->
-            <video id="bg" autoplay muted loop src="assets/bg.mp4"></video>
+      <!-- Video -->
+      <video id="bg" autoplay muted loop src="assets/bg.mp4"></video>
 
-            <!-- dice.js -->
-            <canvas id="dice"></canvas>
-        </div>
+      <!-- dice.js -->
+      <canvas id="dice"></canvas>
+    </div>
 
     <div class="p-2 front-canvas mx-auto" style="top: 90%">
-        <a href="menu2.html"><button id="roll">
-            <span class="span-button">Roll Dice <i class="bi bi-arrow-right"></i></span></button></a>
-      </div>
-    </div>
+      <a href="menu2.html"><button id="roll" onclick="rollDice()">
+          <span class="span-button">Roll Dice <i class="bi bi-arrow-right"></i></span></button></a>
     </div>
+      
+  </div>
+  </div>
 
 </body>
 
 
 <!-- CSS -->
 <style>
-    * {
+  * {
     font-family: "Nova Square", cursive;
   }
-    
-    .back-canvas {
-        z-index: 1;
-    }
 
-    /* bg id  */
-    #bg {
-        position: fixed;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        /*background-color: #9593A4;*/
-        object-fit: cover;
-    }
+  .back-canvas {
+    z-index: 1;
+  }
 
-/* button */
-button {
+  /* bg id  */
+  #bg {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    /*background-color: #9593A4;*/
+    object-fit: cover;
+  }
+
+  /* button */
+  button {
     display: inline-block;
     cursor: pointer;
     outline: none;
@@ -119,21 +120,19 @@ button {
     transform: translate3d(0, 0, -1em);
   }
 
-    canvas {
-        margin: 0;
-        left: 0;
-        top: 0;
-        position: absolute;
-    }
+  canvas {
+    margin: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
 
-    .front-canvas {
+  .front-canvas {
     z-index: 3;
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
   }
-
-
 </style>
 
 </html>

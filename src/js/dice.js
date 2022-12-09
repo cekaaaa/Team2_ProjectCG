@@ -71,6 +71,7 @@ const mouse = {
   x: undefined,
   y: undefined,
 };
+
 // Recrusive function for infinite loop
 function animate() {
   requestAnimationFrame(animate);
