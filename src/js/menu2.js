@@ -1,19 +1,16 @@
 import * as THREE from "three";
 import gsap from "gsap";
-import CANNON from "cannon";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { offset } from "@popperjs/core";
 
-//SCENE
 const scene = new THREE.Scene();
-
-
+// const rollBtn = document.querySelector('.roll')
 
 // video
-// const videoId = document.querySelector("#bg");
-// const video = new THREE.VideoTexture(videoId);
+const videoId = document.querySelector("#bg");
+const video = new THREE.VideoTexture(videoId);
 
-// scene.background = video;
-
+scene.background = video;
 
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -43,7 +40,6 @@ scene.add(ambientLight, hempLight, pointLight);
 
 renderer.render(scene, camera);
 
-//LOADER
 const loader = new GLTFLoader();
 let model;
 loader.load("../assets/dice.glb", function (gltf) {
@@ -52,86 +48,84 @@ loader.load("../assets/dice.glb", function (gltf) {
   model.scale.set(500, 500, 500);
 });
 
-//FLOOR
-var floor = new THREE.PlaneGeometry(30, 30, 10, 10);
-scene.add(floor);
-let floorBody = new CANNON.Body({
-  mass: 0,
-  shape: new CANNON.Plane(),
-  material: DiceManager.floorBodyMaterial
-});
-floorBody.quaternion.setFromAxisAngle(
-  new CANNON.Vec3(1, 0, 0),
-  -Math.PI / 2
-);
-world.add(floorBody);
-
-//WORLD
-world = new CANNON.World();
-world.gravity.set(0, -9.82 *20, 0);
-world.broadphase = new CANNON.NaiveBroadphase();
-world.solver.iterations = 16;
-
-DiceManager.setWorld(world);
-
-//WALLS
-for (var i = 0; i < 5; i++){
-  var die = new DiceD20
-}
-
-function randomDiceThrow() {
-  var diceValues = [];
-
-  for (var i = 0; i < dice.length; i++) {
-    let yRand = Math.random() * 20;
-    dice[i].getObject().position.x = -15 - (i % 3) * 1.5;
-    dice[i].getObject().position.y = 2 + Math.floor(i / 3) * 1.5;
-    dice[i].getObject().position.z = -15 + (i % 3) * 1.5;
-    dice[i].getObject().quaternion.x =
-      ((Math.random() * 90 - 45) * Math.PI) / 180;
-    dice[i].getObject().quaternion.z =
-      ((Math.random() * 90 - 45) * Math.PI) / 180;
-    dice[i].updateBodyFromMesh();
-    let rand = Math.random() * 5;
-    dice[i]
-      .getObject()
-      .body.velocity.set(25 + rand, 40 + yRand, 15 + rand);
-    dice[i]
-      .getObject()
-      .body.angularVelocity.set(
-        20 * Math.random() - 10,
-        20 * Math.random() - 10,
-        20 * Math.random() - 10
-      );
-
-    diceValues.push({ dice: dice[i], value: i + 1 });
-  }
-
-  DiceManager.prepareValues(diceValues);
-}
-
 //Init for normalizing mouse movement
-const mouse = {
-    x: undefined,
-    y: undefined,
-  };
+// const mouse = {
+//     x: undefined,
+//     y: undefined,
+//   };
   // Recrusive function for infinite loop
   function animate() {
     requestAnimationFrame(animate);
-    if (model){
-        model.rotation.x += 0.02;
-        gsap.to(model.rotation, {
-        x: -mouse.y * 3,
-        y: mouse.x * 2,
-        duration: 15,
-    });
-    }
     renderer.render(scene, camera);
   }
-  animate();
   
-  //Normalize mouse movement
-  addEventListener("mousemove", (event) => {
-    mouse.x = (event.clientX / innerWidth) * 2 - 1;
-    mouse.y = (event.clientY / innerWidth) * 2 + 1;
-  });
+  const btnRoll = document.getElementById("roll");
+  btnRoll.addEventListener("click", rollBtn);
+
+  function rollBtn(){
+    let angka = Math.floor(Math.random()*6+1);
+    // Math.floor(Math.random()*6+1);
+  
+    if (model){
+      
+        if(angka == 1){      
+        gsap.to(model.rotation, {
+        x: 12.6,
+        y: 3.2,
+        duration: 2,
+        });
+      }
+    
+        else if(angka == 2){      
+        gsap.to(model.rotation, {
+        x: 12.5,
+        y: 31.5,
+        duration: 2,
+        });
+      }
+    
+        else if(angka == 3){      
+        gsap.to(model.rotation, {
+        x: 6.4,
+        y: 14.1,
+        duration: 2,
+        });
+      }
+    
+        else if(angka == 4){      
+        gsap.to(model.rotation, {
+          x: 12.6,
+          y: 29.9,
+        duration: 2,
+        });
+      }
+    
+        else if(angka == 5){      
+        gsap.to(model.rotation, {
+            x: 11.1,
+            y: 18.8,
+            duration: 2,
+            });
+      }
+    
+      else if(angka == 6){      
+        gsap.to(model.rotation, {
+        x: 26.7,
+        y: 11,
+        duration: 2,
+        });
+      }
+    }
+    
+    // else if(angka == 2){
+
+    // }
+    // gsap.to(model.rotation, {
+    //   x: Math.random() * 10,
+    //   y: Math.random() * 20,
+    //   duration: 1,
+    //   });
+    console.log(model.rotation);
+    console.log(angka);
+  }
+  animate();
