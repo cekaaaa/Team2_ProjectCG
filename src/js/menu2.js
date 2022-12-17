@@ -10,6 +10,20 @@ const scene = new THREE.Scene();
 const videoId = document.querySelector("#bg");
 const video = new THREE.VideoTexture(videoId);
 
+//audio
+const listener = new THREE.AudioListener();
+
+//audio loader
+const audioLoader = new THREE.AudioLoader();
+const backgroundSound = new THREE.Audio(listener);
+//buat sfx untuk dice roll
+const diceSound = new  THREE.Audio(listener);
+audioLoader.load('../assets/sfx2.mp3',function(buffer){
+  diceSound.setBuffer(buffer);
+  diceSound.setLoop(false);
+  diceSound.setVolume(1.0);
+});
+
 scene.background = video;
 
 const camera = new THREE.PerspectiveCamera(
@@ -63,6 +77,7 @@ loader.load("../assets/dice.glb", function (gltf) {
   btnRoll.addEventListener("click", rollBtn);
 
   function rollBtn(){
+    diceSound.play();
     let angka = Math.floor(Math.random()*6+1);
     // Math.floor(Math.random()*6+1);
   
