@@ -79,7 +79,6 @@ loader.load("../assets/dice.glb", function (gltf) {
   function rollBtn(){
     diceSound.play();
     let angka = Math.floor(Math.random()*6+1);
-    // Math.floor(Math.random()*6+1);
   
     if (model){
       
