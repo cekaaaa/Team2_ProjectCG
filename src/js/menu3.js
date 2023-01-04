@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import gsap from "gsap";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { offset } from "@popperjs/core";
+import { auto, offset } from "@popperjs/core";
 
 const scene = new THREE.Scene();
 // const rollBtn = document.querySelector('.roll')
@@ -80,54 +80,92 @@ function rollBtn() {
   diceSound.play();
   let angka = Math.floor(Math.random() * 6 + 1);
 
-  if (model) {
-    if (angka == 1) {
-      gsap.to(model.rotation, {
-        x: 12.6,
-        y: 3.2,
-        duration: 2,
-      });
-    } else if (angka == 2) {
-      gsap.to(model.rotation, {
-        x: 12.5,
-        y: 31.5,
-        duration: 2,
-      });
-    } else if (angka == 3) {
-      gsap.to(model.rotation, {
-        x: 6.4,
-        y: 14.1,
-        duration: 2,
-      });
-    } else if (angka == 4) {
-      gsap.to(model.rotation, {
-        x: 12.6,
-        y: 29.9,
-        duration: 2,
-      });
-    } else if (angka == 5) {
-      gsap.to(model.rotation, {
-        x: 11.1,
-        y: 18.8,
-        duration: 2,
-      });
-    } else if (angka == 6) {
-      gsap.to(model.rotation, {
-        x: 26.7,
-        y: 11,
-        duration: 2,
-      });
-    }
-  }
-
-  // else if(angka == 2){
-
+  // if (model) {
+  //   if (angka == 1) {
+  //     gsap.to(model.rotation, {
+  //       x: ,
+  //       y: ,
+  //       duration: 2,
+  //     });
+  //   } else if (angka == 2) {
+  //     gsap.to(model.rotation, {
+  //       x: ,
+  //       y: ,
+  //       duration: 2,
+  //     });
+  //   } else if (angka == 3) {
+  //     gsap.to(model.rotation, {
+  //       x: ,
+  //       y: ,
+  //       duration: 2,
+  //     });
+  //   } else if (angka == 4) {
+  //     gsap.to(model.rotation, {
+  //       x: ,
+  //       y: ,
+  //       duration: 2,
+  //     });
+  //   } else if (angka == 5) {
+  //     gsap.to(model.rotation, {
+  //       x: ,
+  //       y: ,
+  //       duration: 2,
+  //     });
+  //   } else if (angka == 6) {
+  //     gsap.to(model.rotation, {
+  //       x: 21.8,
+  //       y: 23.5,
+  //       duration: 2,
+  //     });
+  //   } else if (angka == 7) {
+  //     gsap.to(model.rotation, {
+  //       x: ,
+  //       y: ,
+  //       duration: 2,
+  //     });
+  //   } else if (angka == 8) {
+  //     gsap.to(model.rotation, {
+  //       x: 15.6,
+  //       y: 24.8,
+  //       duration: 2,
+  //     });
+  //   } else if (angka == 9) {
+  //     gsap.to(model.rotation, {
+  //       x: 18.7,
+  //       y: 26.1,
+  //       duration: 2,
+  //     });
+  //   } else if (angka == 12) {
+  //     gsap.to(model.rotation, {
+  //       x: 21.8,
+  //       y: 19.8,
+  //       duration: 2,
+  //     });
+  //   } else if (angka == 13) {
+  //     gsap.to(model.rotation, {
+  //       x: 18.7,
+  //       y: 24.8,
+  //       duration: 2,
+  //     });
+  //   } else if (angka == 15) {
+  //     gsap.to(model.rotation, {
+  //       x: 18.7,
+  //       y: 29.9,
+  //       duration: 2,
+  //     });
+  //   } else if (angka == 20) {
+  //     gsap.to(model.rotation, {
+  //       x: 19.8,
+  //       y: 28,
+  //       duration: 2,
+  //     });
   // }
-  // gsap.to(model.rotation, {
-  //   x: Math.random() * 10,
-  //   y: Math.random() * 20,
-  //   duration: 1,
-  //   });
+
+  gsap.to(model.rotation, {
+    x: 20,
+    y: 22,
+    duration: 1,
+    });
   console.log(model.rotation);
   console.log(angka);
 }

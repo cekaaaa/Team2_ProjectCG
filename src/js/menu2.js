@@ -75,7 +75,6 @@ function animate() {
 
 const btnRoll = document.getElementById("roll");
 btnRoll.addEventListener("click", rollBtn);
-
 function rollBtn() {
   diceSound.play();
   let angka = Math.floor(Math.random() * 6 + 1);
