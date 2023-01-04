@@ -56,10 +56,10 @@ renderer.render(scene, camera);
 
 const loader = new GLTFLoader();
 let model;
-loader.load("../assets/dice.glb", function (gltf) {
+loader.load("../assets/dice2.glb", function (gltf) {
   model = gltf.scene;
   scene.add(model);
-  model.scale.set(500, 500, 500);
+  model.scale.set(4, 4, 4);
 });
 
 //Init for normalizing mouse movement
