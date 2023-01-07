@@ -163,7 +163,7 @@ function rollBtn() {
 
   gsap.to(model.rotation, {
     x: 20,
-    y: 22,
+    y: 21,
     duration: 1,
     });
   console.log(model.rotation);
