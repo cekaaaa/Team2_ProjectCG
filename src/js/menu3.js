@@ -78,7 +78,7 @@ btnRoll.addEventListener("click", rollBtn);
 
 function rollBtn() {
   diceSound.play();
-  let angka = Math.floor(Math.random() * 6 + 1);
+  let angka = Math.floor(Math.random() *6 + 1);
 
   // if (model) {
   //   if (angka == 1) {
@@ -161,9 +161,17 @@ function rollBtn() {
   //     });
   // }
 
+  // gsap.to(model.rotation, {
+  //   x: (Math.random() *20 + 1),
+  //   y: (Math.random() *20 + 1),
+  //   // z: (Math.random)*2,
+  //   duration: 1,
+  //   });
+
   gsap.to(model.rotation, {
-    x: 20,
-    y: 21,
+    x: 2.4,
+    y: 11.9,
+    // z: (Math.random)*2,
     duration: 1,
     });
   console.log(model.rotation);
