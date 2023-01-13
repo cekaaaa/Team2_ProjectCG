@@ -193,8 +193,8 @@ function rollBtn() {
       } 
     //   else if (angka == 19) {
     //   gsap.to(model.rotation, {
-    //     x: 9.67,
-    //     y: 5.3,
+    //     x: 17.9,
+    //     y: 19.8,
     //     duration: 2,
     //   });
     // } 
@@ -213,8 +213,8 @@ function rollBtn() {
   //   });
 
   // gsap.to(model.rotation, {
-  //   x: 9.52,
-  //   y: 19.2,
+  //   x: 17.9,
+  //   y: 19.8,
   //   duration: 1,
   //   });
   console.log(model.rotation);
