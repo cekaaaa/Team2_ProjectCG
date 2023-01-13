@@ -202,10 +202,11 @@ function rollBtn() {
         y: 28,
         duration: 2,
       });
+      // if(){
+        
+      // }
   }
 }
-
-
   // gsap.to(model.rotation, {
   //   x: (Math.random() *20 + 1),
   //   y: (Math.random() *20 + 1),

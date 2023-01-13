@@ -1,7 +1,8 @@
 import * as THREE from "three";
 import gsap from "gsap";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { offset } from "@popperjs/core";
+import { afterMain, offset } from "@popperjs/core";
+import { Alert } from "bootstrap";
 
 const scene = new THREE.Scene();
 // const rollBtn = document.querySelector('.roll')
@@ -25,7 +26,6 @@ audioLoader.load("../assets/sfx2.mp3", function (buffer) {
 });
 
 scene.background = video;
-
 const camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
@@ -86,12 +86,17 @@ function rollBtn() {
         y: 3.2,
         duration: 2,
       });
+      // if(model(12.5, 31.5, 0)){
+      //   alert ("a");
+      // }
+      
     } else if (angka == 2) {
       gsap.to(model.rotation, {
         x: 12.5,
         y: 31.5,
         duration: 2,
       });
+     
     } else if (angka == 3) {
       gsap.to(model.rotation, {
         x: 6.4,
@@ -127,7 +132,27 @@ function rollBtn() {
   //   y: Math.random() * 20,
   //   duration: 1,
   //   });
+
+    // gsap.to(model.rotation, {
+  //   x: ,
+  //   y: ,
+  //   duration: 1,
+  //   });
+
+  
   console.log(model.rotation);
   console.log(angka);
+  // showResult();
+  setTimeout(function() { alert("Angka yang didapat adalah: "+ angka); }, 2300);
+
 }
 animate();
+
+
+// if(model.position(12.5, 31.5, 0)){
+//   alert ("a");
+// }
+
+// function showResult(){
+//   alert("a")
+// }
