@@ -99,6 +99,7 @@ function rollBtn() {
         y: 8.6,
         duration: 2,
       });
+
     } else if (angka == 4) {
       gsap.to(model.rotation, {
         x: 8.5,
@@ -204,6 +205,7 @@ function rollBtn() {
   }
 }
 
+
   // gsap.to(model.rotation, {
   //   x: (Math.random() *20 + 1),
   //   y: (Math.random() *20 + 1),
@@ -219,3 +221,5 @@ function rollBtn() {
   console.log(angka);
 }
 animate();
+alert("Angka yang didapat adalah " + angka);
+
