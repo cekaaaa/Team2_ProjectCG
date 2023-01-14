@@ -89,8 +89,8 @@ function rollBtn() {
       });
     } else if (angka == 2) {
       gsap.to(model.rotation, {
-        x: 14.5,
-        y: 13.6,
+        x: 14.9,
+        y: 13.4,
         duration: 2,
       });
     } else if (angka == 3) {
@@ -191,13 +191,13 @@ function rollBtn() {
         duration: 2,
       });
       } 
-    //   else if (angka == 19) {
-    //   gsap.to(model.rotation, {
-    //     x: 17.9,
-    //     y: 19.8,
-    //     duration: 2,
-    //   });
-    // } 
+      else if (angka == 19) {
+      gsap.to(model.rotation, {
+        x: 17.9,
+        y: 19.8,
+        duration: 2,
+      });
+    } 
     else if (angka == 20) {
       gsap.to(model.rotation, {
         x: 19.8,
@@ -213,13 +213,13 @@ function rollBtn() {
   //   });
 
   // gsap.to(model.rotation, {
-  //   x: 17.9,
-  //   y: 19.8,
+  //   x: 14.9,
+  //   y: 13.4,
   //   duration: 1,
   //   });
   console.log(model.rotation);
   console.log(angka);
-  setTimeout(function() { alert("Angka yang didapat adalah: "+ angka); }, 2500);
+  setTimeout(function() { alert("Angka yang didapat adalah: "+ angka); }, 2300);
 
 }
 animate();
